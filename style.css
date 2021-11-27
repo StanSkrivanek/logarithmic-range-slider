@@ -1,0 +1,179 @@
+body {
+  padding-top: 200px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.range-slider__c {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.rangeslider {
+  width: 100%;
+  position: relative;
+}
+/*generated with Input range slider CSS style generator (version 20210711)
+https://toughengineer.github.io/demo/slider-styler*/
+
+input[type="range"].styled-slider {
+  height: 2rem;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+/*progress support*/
+input[type="range"].styled-slider.slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 5em + var(--ratio) * (100% - 5em));
+}
+
+input[type="range"].styled-slider:focus {
+  outline: none;
+}
+
+/*webkit*/
+input[type="range"].styled-slider::-webkit-slider-thumb {
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background: #232323;
+  border: none;
+  box-shadow: 0 0 2px black;
+  margin-top: calc(max((4px - 1px - 1px) * 0.5, 0px) - 2em * 0.5);
+  -webkit-appearance: none;
+}
+
+input[type="range"].styled-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 0.5em;
+  /* background: #efefef; */
+  /* background: #9e4343; */
+  border: 1px solid #b2b2b2;
+  box-shadow: none;
+  width: 100%;
+}
+input[type="range"].styled-slider.slider-progress::-webkit-slider-runnable-track {
+  background: linear-gradient(#57e69e, #57e69e) 0 / var(--sx) 100% no-repeat,
+    /* #efefef; */ #ffffff;
+}
+
+input[type="range"].styled-slider.slider-progress:active::-webkit-slider-runnable-track {
+  background: linear-gradient(#57e69e, #57e69e) 0 / var(--sx) 100% no-repeat,
+    #efefef;
+}
+
+/*mozilla*/
+input[type="range"].styled-slider::-moz-range-thumb {
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background: #4c4c4c;
+  border: none;
+  box-shadow: 0 0 2px black;
+}
+
+input[type="range"].styled-slider::-moz-range-track {
+  height: max(calc(4px - 1px - 1px), 0px);
+  border-radius: 0.5em;
+  background: #efefef;
+  border: 1px solid #b2b2b2;
+  box-shadow: none;
+}
+
+input[type="range"].styled-slider.slider-progress::-moz-range-track {
+  background: linear-gradient(#57e69e, #57e69e) 0 / var(--sx) 100% no-repeat,
+    #efefef;
+}
+
+input[type="range"].styled-slider.slider-progress:active::-moz-range-track {
+  background: linear-gradient(#57e69e, #57e69e) 0 / var(--sx) 100% no-repeat,
+    #efefef;
+}
+
+/*ms*/
+input[type="range"].styled-slider::-ms-fill-upper {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type="range"].styled-slider::-ms-fill-lower {
+  background: transparent;
+  border-color: transparent;
+}
+
+input[type="range"].styled-slider::-ms-thumb {
+  width: 5em;
+  height: 2em;
+  border-radius: 1em;
+  background: #4c4c4c;
+  border: none;
+  box-shadow: 0 0 2px black;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+input[type="range"].styled-slider::-ms-track {
+  height: 4px;
+  border-radius: 0.5em;
+  background: #efefef;
+  border: 1px solid #b2b2b2;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
+  height: max(calc(4px - 1px - 1px), 0px);
+  border-radius: 0.5em 0 0 0.5em;
+  margin: -1px 0 -1px -1px;
+  background: #57e69e;
+  border: 1px solid #b2b2b2;
+  border-right-width: 0;
+}
+
+input[type="range"].styled-slider.slider-progress:active::-ms-fill-lower {
+  background: #57e69e;
+}
+.range-wrap {
+  position: relative;
+  margin: 0 auto 3rem;
+}
+.range {
+  width: 100%;
+}
+.bubble {
+  font-size: 32px;
+  color: 000;
+  /* border: 1px solid blue; */
+  position: absolute;
+  top: -150%;
+
+  transform: translateX(-50%);
+}
+.bubble::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: rgb(138, 135, 135);
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* === DATA === */
+
+.columns {
+  display: grid;
+  /* align-items: center; */
+  /* grid-auto-columns: 1fr; */
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.column {
+  display: block;
+}
+
+.stat-value {
+  font-size: 28px;
+}
